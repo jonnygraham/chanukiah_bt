@@ -23,7 +23,7 @@ function send(data) {
 			bluetoothSerial.connect(btAddress,
 			function connectSuccess() {
 			  $("#connState").text("Connected");
-			  bluetoothSerial.write(data);
+			  bluetoothSerial.write(data+"X");
 			},
 			function connectFailure() {
 			  $("#connState").text("Failed to connect");
