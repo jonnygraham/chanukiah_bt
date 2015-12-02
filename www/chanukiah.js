@@ -15,7 +15,8 @@ function connect() {
 	);
 }
 */
-function send(data) {
+function send(rawData) {
+	var data = rawData+"X";
 	//Connect if necessary
 	bluetoothSerial.isConnected(function success() {
 		bluetoothSerial.write(data);
@@ -23,7 +24,7 @@ function send(data) {
 			bluetoothSerial.connect(btAddress,
 			function connectSuccess() {
 			  $("#connState").text("Connected");
-			  bluetoothSerial.write(data+"X");
+			  bluetoothSerial.write(data);
 			},
 			function connectFailure() {
 			  $("#connState").text("Failed to connect");
