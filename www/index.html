@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html style="height:100%">
+	<head> 
+		<title>Chanukiah Controller</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"> 
+		<script src="phonegap.js"></script>
+		<script src="jquery-1.9.1.min.js"></script>
+		<script src="chanukiah.js"/></script>
+	</head>
+	<body>
+		<!--<button onclick="connect()">Connect</button>-->
+		<span id="connState">Not connected</span>
+		<br/><span id="command"></span>
+
+	<br/>
+	<br/>
+	
+		<button onclick="reset()">All off</button><br/><br/>
+		<div style="width:200px;">
+			<div style="float:left;">
+			<form id="controls">
+				<input type="radio" name="light" value="1" checked>1<br/>
+				<input type="radio" name="light" value="2">2<br/>
+				<input type="radio" name="light" value="3">3<br/>
+				<input type="radio" name="light" value="4">4<br/>
+				<input type="radio" name="light" value="5">5<br/>
+				<input type="radio" name="light" value="6">6<br/>
+				<input type="radio" name="light" value="7">7<br/>
+				<input type="radio" name="light" value="8">8<br/>
+			<br/>
+			</form>
+			</div>
+			<div style="float:right;">
+		<button onclick="lightAll()">Auto Light</button>	<br/><br/>
+		<button onclick="setMax()">Set Max Lights</button><br/><br/>
+		<button onclick="light()">Light single</button><br/><br/>
+
+			</div>
+		</div>
+		
+	</body>
+</html>
